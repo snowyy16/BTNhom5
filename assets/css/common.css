@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FEA128;
+    --color-btn: #f2f2f2;
+    --color-text: #27336e;
+}
+ 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* height: 10000px; */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============= Common ============= */
+
+.btn {
+    min-width: 120px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--color-btn);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    opacity: 0.8;
+}
+.fa-solid {
+    color: var(--primary-color);
+}
+
+
+.title {
+    color: var(--color-text);
+    padding-top: 50px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3.4rem;
+}
+
+/* =================================== Navbar ================================= */
+.navbar {
+    background-color: #fbf9f9;
+    /* backdrop-filter: blur(2px); */
+    /* opacity: 0.9; */
+}
+
+.navbar .img-logo {
+    height: 70px;
+}
+
+.navbar  .navbar-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .navbar-sub-menu .dropdown-item {
+    font-size: 1.6rem;
+}
+
+.navbar .nav-link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    min-width: 10rem;
+    color: #000;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary-color);
+}
+
+.navbar .btn-cta {
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .dropdown-menu a {
+    display: block;
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+.navbar .dropdown-menu li:not(:last-of-type) a {
+    border-bottom: 1px solid #ccc;
+}
+
+/* ============================== Modal ====================================== */
+.modal .modal-body select,input:not([type=radio]) {
+    height: 40px;
+}
+
+.modal .modal-body input, option {
+    font-size: 1.4rem;
+}
+
+.modal .modal-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.modal .err {
+    color: red;
+}
+
+/* ================== Jquery ============== */
+#idQuan  option {
+    display: none;
+}
+
+#idCoSo option {
+    display: none;
+} 
+/* ============================= Header =======================================*/
+.header {
+    background-image: url(../img/baner.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header .cover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* ========================================= Footer ========================= */
+.footer {
+    margin-top: 40px;
+    padding: 50px 0;
+    background-color: #3D3D47;
+    color: #fff;
+}
+
+.footer .first *:not(.title) {
+    padding-top: 20px;
+}
+
+.footer .title {
+    display: inline-block;
+    border-bottom: 5px dotted #fff;
+    padding: 10px 0 20px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.footer .second .list-info{
+    padding: 0;
+}
+
+.footer .second .item {
+    list-style: none;
+}
+
+.footer .second .link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.footer .third .list-img a {
+    display: inline-block;
+    margin: 20px 3px 0;
+    width: 40px;
+    height: 40px;
+}
+
+.footer .third img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}

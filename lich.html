@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/lich.css">
+    <link rel="stylesheet" href="./assets/css/responsive-common.css">
+    
+     <!-- ==== Icon ========== -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lịch Khai Giảng</title>
+</head>
+</body>
+<nav class="navbar navbar-expand-md sticky-top">
+    <div class="container">
+        <a href="./index.html" class="navbar-brand"><img src="./assets/img/logo.png" alt="Logo TQS" class="img-logo"></a>
+        <button id="fondo" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapseNavbar">
+            <ul class="navbar-nav navbar-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./giothieu.html" class="nav-link">Giới thiệu</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle " role="button" data-bs-toggle="dropdown">Khóa
+                        học</a>
+                    <ul class="dropdown-menu navbar-sub-menu">
+                        <li>
+                            <a href="khoahoconline.html]" class="dropdown-item">Khóa Học Online</a>
+                        </li>
+                        <li>
+                            <a href="./khoahoc1-1.html" class="dropdown-item">Khóa Học Online 1 kèm 1</a>
+                        </li>
+                        <li>
+                            <a href="khoahocdilam.html" class="dropdown-item">Khóa Học đi làm</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="dropdown-item">LUYỆN THI IELTS TQS</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="dropdown-item">TIẾNG ANH CHO NGƯỜI MẤT GỐC</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="dropdown-item">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="tintuc-1.html" class="nav-link">Tin Tức</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle  active" role="button" data-bs-toggle="dropdown">Thư Viện</a>
+                    <ul class="dropdown-menu navbar-sub-menu">
+                        <li><a href="#" class="dropdown-item active">Lịch khai giảng</a></li>
+                        <li><a href="baithi.html" class="dropdown-item">Bài thi mẫu</a></li>
+                        <li><a href="duhoc.html" class="dropdown-item">Du Học</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="btn-cta">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                <button type="button" class="btn">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- ===== Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng kí nhận tư vấn</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- ===== Modal Body -->
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Họ và Tên
+                                    <span id="errName" class="err">(*)</span>
+                                </label>
+                                <input type="text" class="form-control" name="" id="txtName" placeholder="Họ và Tên">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Số Điện Thoại
+                                    <span id="errPhone" class="err">(*)</span>
+                                </label>
+                                <input type="number" class="form-control" name="" id="txtPhone"
+                                    placeholder="Số Điện Thoại">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Email
+                                    <span id="errEmail" class="err">(*)</span>
+                                </label>
+                                <input type="email" class="form-control" name="" id="txtEmail" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Khóa Học
+                                    <span id="errKhoaHoc" class="err">Chọn khóa học(*)</span>
+                                </label>
+                                <select name="" id="idKhoaHoc" class="form-select">
+                                    <option value="selected" selected>Chọn khóa học</option>
+                                    <option value="">TIẾNG ANH CHO BÉ MẪU GIÁO</option>
+                                    <option value="">TIẾNG ANH THIẾU NHI</option>
+                                    <option value="">TIẾNG ANH THCS</option>
+                                    <option value="">LUYỆN THI IELTS TQS</option>
+                                    <option value="">TIẾNG ANH CHO NGƯỜI MẤT GỐC</option>
+                                    <option value="">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Ngày Sinh
+                                    <span id="errNgaySinh" class="err">(*)</span>
+                                </label>
+                                <input type="date" class="form-control" name="" id="txtNgaySinh">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Tỉnh/Thành Phố bạn muốn học
+                                    <span id="errTP" class="err">Chọn Tỉnh/TP(*)</span>
+                                </label>
+                                <select name="" id="idTP" class="form-select">
+                                    <option value="selected" selected>Tỉnh/Thành Phố</option>
+                                    <option value="hcm" id="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="hn" id="hn">Hà Nội</option>
+                                    <option value="la" id="la">Long An</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Quận
+                                    <span id="errQuan" class="err">Chọn Quận/Huyện(*)</span>
+                                </label>
+                                <select name="" id="idQuan" class="form-select quan">
+                                    <option value="selected" class="selected" selected>Chọn Quận/Huyện</option>
+                                    <option id="govap" value="govap" class="hcm">Quận Gò vấp</option>
+                                    <option id="bthanh" value="bthanh" class="hcm ">Quận Bình Thạnh</option>
+                                    <option id="q1" value="q1" class="hcm">Quận 1</option>
+                                    <option id="dongda" value="dongda" class="hnoi">Quận Đống Đa</option>
+                                    <option id="badinh" value="badinh" class="hnoi">Quận Ba Đình</option>
+                                    <option id="duchoa" value="duchoa" class="lan">Huyện Đức Hòa</option>
+                                    <option id="vhung" value="vhung" class="lan">Huyện Vĩnh Hưng</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Cơ Sở Tư Vấn
+                                    <span id="errCoSo" class="err">Chọn Cơ Sở(*)</span>
+                                </label>
+                                <select name="" id="idCoSo" class="form-select">
+                                    <option value="selected" class="selected" selected>Cơ Sở Tư Vấn</option>
+                                    <option value="" class="govap">14 Nguyễn Văn Bảo, phường 4, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="govap">222 Nguyễn Kiệm, phường 10, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="govap">333 Quang Trung, phường 11, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="bthanh">444 Phan Văn Trị, phường 1, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="bthanh">555 Lê Quang Định, phường 14, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="bthanh">666 Nguyễn Xí, phường 10, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="q1">11 Võ Thi Sáu, phường 4, Quận 1, TP.HCM</option>
+                                    <option value="" class="q1">33 Hai Bà Trưng, phường 5, Quận 1, TP.HCM</option>
+                                    <option value="" class="q1">20 Lê Thánh Tôn, phường 16, Quận 1, TP.HCM</option>
+                                    <option value="" class="dongda">178C P. Tây Sơn, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="dongda">104 P. Trung Liệt, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="dongda">2 Ng. 121 P. Thái Hà, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="badinh">226 P. Vạn Phúc, Liễu Giai, Ba Đình, Hà Nội</option>
+                                    <option value="" class="badinh">93A P. Đội Cấn, Đội Cấn, Ba Đình, Hà Nội</option>
+                                    <option value="" class="badinh">2, Ngọc Hồ, Ba Đình, Hà Nội, Việt Nam</option>
+                                    <option value="" class="duchoa">Ấp Mới I Xã Mỹ Hạnh Nam, Mỹ Hạnh Nam, Đức Hòa, Long An, Việt Nam</option>
+                                    <option value="" class="vhung">thị trấn Vĩnh Hưng, huyện Vĩnh Hưng, tỉnh Long An</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- ===== Modal Footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn" data-bs-dismiss="modal" id="submit">Đăng kí</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        style="background-color: #dc3545;">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="cover">
+            <div class="container">
+                <h1 class="title">Lịch Khai Giảng Các Lớp Học Offline <span>Mới Nhất</span></h1>
+                <div class="btn-cta">
+                    <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư vấn
+                        &gt;&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="calendar">
+        <div class="container">
+            <h2 class="sub-title">LỊCH KHAI GIẢNG</h2>
+            <form action="" class="form">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>KHÓA HỌC</th>
+                            <th>KHAI GIẢNG/ĐỊA ĐIỂM</th>
+                            <th>LỊCH HỌC</th>
+                            <th>ĐĂNG KÝ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TQS Communicative Elementary LC2</td>
+                            <td>16/04/2024 <br>CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội</td>
+                            <td>17:45(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Elementary LC1+LC2</td>
+                            <td>16/04/2024 <br>CS1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</td>
+                            <td>17:45(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Communicative English Elementary CE2</td>
+                            <td>18/04/2024 <br> CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội </td>
+                            <td>20:00(Thứ 2,5)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Pre-intermediate LC3</td>
+                            <td>19/04/2024<br>CS1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</td>
+                            <td>17:45(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Pre-intermediate LC3</td>
+                            <td>19/04/2024 <br> CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội</td>
+                            <td>20:00(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Intermediate LC4</td>
+                            <td>22/04/2024 <br>CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội</td>
+                            <td>17:45(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Communicative English Starter CE1</td>
+                            <td>23/04/2024 <br> CS1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</td>
+                            <td>20:00(Thứ 3,6)</td><td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Starter LC1</td>
+                            <td>28/05/2024 <br>CS1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</td>
+                            <td>20:00(Thứ 2,5)</td><td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Elementary LC2</td>
+                            <td>23/04/2024 <br>CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội</td>
+                            <td>17:45(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Pre-intermediate LC3</td>
+                            <td>23/04/2024 <br>CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội</td>
+                            <td>20:00(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>LangPro - Pre-intermediate S3</td>
+                            <td>23/04/2024 <br>CS1: 169 Xuân Thủy, Cầu Giấy, Hà Nội</td>
+                            <td>17:45(Thứ 3,6)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>TQS Communicative Pre-intermediate LC3</td>
+                            <td>22/04/2024 <br>CS3: 179 Trường Chinh, Thanh Xuân, Hà Nội</td>
+                            <td>20:00(Thứ 2,5)</td>
+                            <td>
+                                <div class="btn-cta">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="reason">
+        <div class="container">
+            <h2 class="sub-title">LÝ DO NÊN CHỌN TQS ENGLISH</h2>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <div class="col-10">
+                            <div class="content">
+                                <h3 class="head">Mô hình học trực tiếp toàn diện</h3>
+                                <ul>
+                                    <li>Mô hình học 5CH độc quyền: Class - Club - Conference - Community - Camp - Home</li>
+                                    <li>Phân lớp dựa trên bài test đầu vào và có các lớp riêng biệt dành cho sinh viên và người đi làm</li>
+                                    <li>Cam kết đầu ra chuẩn CEFR</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="col-10">
+                            <div class="content">
+                                <h3 class="head">X5 Hiệu Qủa Với Phương Pháp Học Tiên Tiến</h3>
+                                <ul>
+                                    <li>Tự hào là tổ chức giáo dục đầu tiên tại Việt Nam ứng dụng NLP</li>
+                                    <li>Các phương pháp tiên tiến như: ELC, PBL, TPRS và Tiếng Anh kỷ luật cũng được kết hợp đan xen nhau giúp việc học tiếng Aanh trở nên thú vị và hấp dẫn.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-lg-5 pt-sm-0">
+                <div class="col-lg-6 col-sm-12 item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-person-chalkboard"></i>
+                        </div>
+                        <div class="col-10">
+                            <div class="content">
+                                <h3 class="head">100% Giáo Viên Đạt 7.5 IETLS/900+ TOEIC</h3>
+                                <ul>
+                                    <li>TQS là trung tâm có yêu cầu cao và khắt khe bậc nhất trong thị trường Tiếng Anh giao tiếp hiện nay.</li>
+                                    <li>Nhiều năm kinh nghiệm và giảng dạy, luôn đồng hành, kèm cặp sát sao và tạo động lực cho học viên.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 item">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="col-10">
+                            <div class="content">
+                                <h3 class="head">Phát Triển Kỹ Năng - Định Hướng Công Việc</h3>
+                                <ul>
+                                    <li>Song song với đào tạo tiếng Anh giao tiếp, TQS tạo điều kiện và môi trường giúp bạn phát triển các kỹ năng cần thiết như: lên kế hoạch, thuyết trình, thiết kế, làm video cơ bản,...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 first">
+                    <h3 class="title">TQS English</h3>
+                    <p><b>TQS English</b> tự hào là một trong những trung tâm Anh ngữ hàng đầu Việt
+                        NamTQS English tự hào là một trong những trung tâm Anh ngữ hàng đầu Việt Nam</p>
+                    <address><b>Địa chỉ:</b> 14 Nguyễn Văn Bảo, phường 4, Gò Vấp, TP.Hồ Chí Minh</address>
+                    <p><b>Email:</b> tqsenglish@gmail.com</p>
+                    <p><b>Hotline:</b> 0123456789</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 second">
+                    <h3 class="title">Thông Tin</h3>
+                    <ul class="list-info">
+                        <li class="item">
+                            <a href="#!" class="link">Trang chủ</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Khóa học</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Lịch khai giảng</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Tin tức</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Giới thiệu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 second">
+                    <h3 class="title">Khóa Học</h3>
+                    <ul class="list-info">
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH CHO BÉ MẪU GIÁO</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH THIẾU NHI</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH THCS</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">LUYỆN THI IELTS TQS</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH CHO NGƯỜI MẤT GỐC</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 third">
+                    <h3 class="title">Liên Hệ</h3>
+                    <div class="list-img">
+                        <a href="#!">
+                            <img src="./assets/img/Logo-Facebook.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/img/Logo-instagram.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/img/Logo-mail.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== JS ======= -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#txtName").blur(function() {
+            var name = document.getElementById("txtName").value;
+            var regName = /^([A-Z][a-z]+(?: [A-Z][a-z]+)*)$/
+            if(name == null || name == "")
+                errName.innerHTML = "Không được bỏ trống";
+            else if(!regName.test(name))
+                errName.innerHTML = "Tên không hợp lệ";
+            else errName.innerHTML = "";
+        })
+
+        $("#txtPhone").blur(function() {
+            var phone = document.getElementById("txtPhone").value;
+            var regPhone = /^(0[13579])[0-9]{8}$/
+            if(phone == null || phone == "")
+                errPhone.innerHTML = "Không được bỏ trống";
+            else if(!regPhone.test(phone))
+                errPhone.innerHTML = "Số điện thoại không hợp lệ";
+            else errPhone.innerHTML = "";
+        })
+
+        $("#txtEmail").blur(function() {
+            var email = document.getElementById("txtEmail").value;
+            var regEmail = /^[a-z0-9]+(@gmail.com)$/
+            if(email == null || email == "")
+                errEmail.innerHTML = "Không được bỏ trống";
+            else if(!regEmail.test(email))
+                errEmail.innerHTML = "Email không hợp lệ";
+            else errEmail.innerHTML = "";
+        })
+
+        $("#idKhoaHoc").blur(function() {
+            var dsKH = $("#idKhoaHoc option:checked").val();
+            if(dsKH == "selected")
+                errKhoaHoc.innerHTML = "Chọn khóa học(*)"; 
+            else errKhoaHoc.innerHTML = ""; 
+            
+        })
+
+        $("#txtNgaySinh").blur(function() {
+            var birthDate = new Date(document.getElementById("txtNgaySinh").value);
+            var today = new Date();
+            var tuoi = today.getFullYear() - birthDate.getFullYear();
+            if(tuoi <= 3)
+                errNgaySinh.innerHTML = "Tuổi phải lớn hơn 3";
+            else errNgaySinh.innerHTML= "";
+            
+        })
+
+        $("#idTP").blur(function() {
+            var dsTP = $("#idTP option:checked").val();
+            if(dsTP == "selected")
+                errTP.innerHTML = "Chọn Tỉnh/TP(*)"; 
+            else errTP.innerHTML = ""; 
+            
+        })
+
+        $("#idQuan").blur(function() {
+            var dsQH = $("#idQuan option:checked").val();
+            if(dsQH == "selected")
+                errQuan.innerHTML = "Chọn Quận/Huyện(*)"; 
+            else   errQuan.innerHTML = ""; 
+            
+        })
+
+        $("#idCoSo").blur(function() {
+            var dsCS = $("#idCoSo option:checked").val();
+            if(dsCS == "selected")
+                errCoSo.innerHTML = "Chọn Cơ Sở(*)"; 
+            else   errCoSo.innerHTML = ""; 
+            
+        })
+
+        // =========== Ẩn Hiện ============
+
+        $("#idTP").blur(function() {
+            var hcm = document.getElementById("hcm").value;
+            var hn = document.getElementById("hn").value;
+            var la = document.getElementById("la").value;
+            var dsTP = $("#idTP option:checked").val();
+            if(dsTP == "selected") {
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".selected").css({"display" : "block"});
+            }
+            else if(dsTP == hcm){
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".hcm").css({"display" : "block"});
+            }
+            else if(dsTP == hn){
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".hnoi").css({"display" : "block"});
+            }
+            else{
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".lan").css({"display" : "block"});
+            }
+        })
+
+        $("#idQuan").blur(function() {
+            var gvap = document.getElementById("govap").value;
+            var bthanh = document.getElementById("bthanh").value;
+            var q1 = document.getElementById("q1").value;
+            var dda = document.getElementById("dongda").value;
+            var bdinh = document.getElementById("badinh").value;
+            var dhoa = document.getElementById("duchoa").value;
+            var vhung = document.getElementById("vhung").value;
+
+            var dsQuan = $("#idQuan option:checked").val();
+            if(dsQuan == "selected"){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".selected").css({"display" : "block"});
+            }
+            else if(dsQuan == gvap){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".govap").css({"display" : "block"});
+            }
+            else if(dsQuan == bthanh){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".bthanh").css({"display" : "block"});
+            }
+            else if(dsQuan == q1){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".q1").css({"display" : "block"});
+            }
+            else if(dsQuan == dda){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".dongda").css({"display" : "block"});
+            }
+            else if(dsQuan == bdinh){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".badinh").css({"display" : "block"});
+            }
+            else if(dsQuan == dhoa){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".duchoa").css({"display" : "block"});
+            }
+            else{
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".vhung").css({"display" : "block"});
+            }
+        })
+    });
+</script>
+<body>
+    
+</html>

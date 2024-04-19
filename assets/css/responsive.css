@@ -1,0 +1,87 @@
+
+/* =============================================== Ipad-Mobile ================================== */
+@media(max-width: 1023px) {
+
+    .header .container .desc {
+        width: 400px;
+        font-size: 1.4rem;
+        margin: 5px 0 10px;
+        font-weight: 400;
+    }
+    /* ========= Advantage ========== */
+    .advantage .item .desc {
+        font-size: 1.6rem;
+    }
+
+    .advantage .item .desc {
+        max-width: 250px;
+    }
+
+    /* ========= Achievement ========== */
+
+    .achievement .item .count {
+        font-size: 3rem;
+    }
+
+    .achievement .item .count:not(.no-after)::after {
+        content: "+";
+        font-size: 2rem;
+    }
+
+    .achievement .item .desc {
+        font-size: 2rem;
+    }
+
+    /* ======== Course ======== */
+    .course .desc {
+        width: 100%;
+        font-size: 1.6rem;
+    }
+
+}
+    
+    /* ======================================= Mobile ===================================== */
+    @media (max-width: 739px) {
+        
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .header .container .desc {
+        width: 300px;
+        font-size: 1.4rem;
+        margin: 5px 0 10px;
+        font-weight: 400;
+    }
+
+    .modal .modal-body input:not([type=radio]) {
+        height: 20px;
+    }
+
+/* ============= Advantage ============ */
+
+    /* ========= Achievement ========== */
+
+    .achievement .item .count {
+        font-size: 2.6rem;
+    }
+
+    .achievement .item .desc {
+        font-size: 1.7rem;
+    }
+    
+    .achievement .item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .achievement .item .wrap-text {
+        padding-left: 0;
+    }
+    /* ======== List-Teacher ==========*/
+    #slider {
+        display: none;
+    }
+
+}

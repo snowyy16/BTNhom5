@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/khoahoconline.css">
+    <link rel="stylesheet" href="./assets/css/responsive-common.css">
+
+     <!-- ==== Icon ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Khóa học online</title>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand"><img src="./assets/img/logo.png" alt="Logo TQS" class="img-logo"></a>
+            <button id="fondo" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapseNavbar">
+                <ul class="navbar-nav navbar-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./giothieu.html" class="nav-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle  active" role="button" data-bs-toggle="dropdown">Khóa
+                            học</a>
+                        <ul class="dropdown-menu navbar-sub-menu">
+                            <li>
+                                <a href="#" class="dropdown-item active">Khóa Học Online</a>
+                            </li>
+                            <li>
+                                <a href="./khoahoc1-1.html" class="dropdown-item">Khóa Học Online 1 kèm 1</a>
+                            </li>
+                            <li>
+                                <a href="khoahocdilam.html" class="dropdown-item">Khóa Học đi làm</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-item">LUYỆN THI IELTS TQS</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-item">TIẾNG ANH CHO NGƯỜI MẤT GỐC</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-item">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tintuc-1.html" class="nav-link">Tin Tức</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Thư Viện</a>
+                        <ul class="dropdown-menu navbar-sub-menu">
+                            <li><a href="./lich.html" class="dropdown-item">Lịch khai giảng</a></li>
+                            <li><a href="baithi.html" class="dropdown-item">Bài thi mẫu</a></li>
+                            <li><a href="duhoc.html" class="dropdown-item">Du Học</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="btn-cta">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                    <button type="button" class="btn">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- ===== Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng kí nhận tư vấn</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- ===== Modal Body -->
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Họ và Tên
+                                    <span id="errName" class="err">(*)</span>
+                                </label>
+                                <input type="text" class="form-control" name="" id="txtName" placeholder="Họ và Tên">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Số Điện Thoại
+                                    <span id="errPhone" class="err">(*)</span>
+                                </label>
+                                <input type="number" class="form-control" name="" id="txtPhone"
+                                    placeholder="Số Điện Thoại">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Email
+                                    <span id="errEmail" class="err">(*)</span>
+                                </label>
+                                <input type="email" class="form-control" name="" id="txtEmail" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Khóa Học
+                                    <span id="errKhoaHoc" class="err">Chọn khóa học(*)</span>
+                                </label>
+                                <select name="" id="idKhoaHoc" class="form-select">
+                                    <option value="selected" selected>Chọn khóa học</option>
+                                    <option value="">TIẾNG ANH CHO BÉ MẪU GIÁO</option>
+                                    <option value="">TIẾNG ANH THIẾU NHI</option>
+                                    <option value="">TIẾNG ANH THCS</option>
+                                    <option value="">LUYỆN THI IELTS TQS</option>
+                                    <option value="">TIẾNG ANH CHO NGƯỜI MẤT GỐC</option>
+                                    <option value="">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Ngày Sinh
+                                    <span id="errNgaySinh" class="err">(*)</span>
+                                </label>
+                                <input type="date" class="form-control" name="" id="txtNgaySinh">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Tỉnh/Thành Phố bạn muốn học
+                                    <span id="errTP" class="err">Chọn Tỉnh/TP(*)</span>
+                                </label>
+                                <select name="" id="idTP" class="form-select">
+                                    <option value="selected" selected>Tỉnh/Thành Phố</option>
+                                    <option value="hcm" id="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="hn" id="hn">Hà Nội</option>
+                                    <option value="la" id="la">Long An</option>
+                                    <!-- <option value="">Đà Nẵng</option>
+                                    <option value="">Vũng Tàu</option>
+                                    <option value="">Nha Trang</option> -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Quận
+                                    <span id="errQuan" class="err">Chọn Quận/Huyện(*)</span>
+                                </label>
+                                <select name="" id="idQuan" class="form-select quan">
+                                    <option value="selected" class="selected" selected>Chọn Quận/Huyện</option>
+                                    <option id="govap" value="govap" class="hcm">Quận Gò vấp</option>
+                                    <option id="bthanh" value="bthanh" class="hcm ">Quận Bình Thạnh</option>
+                                    <option id="q1" value="q1" class="hcm">Quận 1</option>
+                                    <option id="dongda" value="dongda" class="hnoi">Quận Đống Đa</option>
+                                    <option id="badinh" value="badinh" class="hnoi">Quận Ba Đình</option>
+                                    <option id="duchoa" value="duchoa" class="lan">Huyện Đức Hòa</option>
+                                    <option id="vhung" value="vhung" class="lan">Huyện Vĩnh Hưng</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Cơ Sở Tư Vấn
+                                    <span id="errCoSo" class="err">Chọn Cơ Sở(*)</span>
+                                </label>
+                                <select name="" id="idCoSo" class="form-select">
+                                    <option value="selected" class="selected" selected>Cơ Sở Tư Vấn</option>
+                                    <option value="" class="govap">14 Nguyễn Văn Bảo, phường 4, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="govap">222 Nguyễn Kiệm, phường 10, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="govap">333 Quang Trung, phường 11, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="bthanh">444 Phan Văn Trị, phường 1, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="bthanh">555 Lê Quang Định, phường 14, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="bthanh">666 Nguyễn Xí, phường 10, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="q1">11 Võ Thi Sáu, phường 4, Quận 1, TP.HCM</option>
+                                    <option value="" class="q1">33 Hai Bà Trưng, phường 5, Quận 1, TP.HCM</option>
+                                    <option value="" class="q1">20 Lê Thánh Tôn, phường 16, Quận 1, TP.HCM</option>
+                                    <option value="" class="dongda">178C P. Tây Sơn, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="dongda">104 P. Trung Liệt, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="dongda">2 Ng. 121 P. Thái Hà, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="badinh">226 P. Vạn Phúc, Liễu Giai, Ba Đình, Hà Nội</option>
+                                    <option value="" class="badinh">93A P. Đội Cấn, Đội Cấn, Ba Đình, Hà Nội</option>
+                                    <option value="" class="badinh">2, Ngọc Hồ, Ba Đình, Hà Nội, Việt Nam</option>
+                                    <option value="" class="duchoa">Ấp Mới I Xã Mỹ Hạnh Nam, Mỹ Hạnh Nam, Đức Hòa, Long An, Việt Nam</option>
+                                    <option value="" class="vhung">thị trấn Vĩnh Hưng, huyện Vĩnh Hưng, tỉnh Long An</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- ===== Modal Footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn" id="submit">Đăng kí</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        style="background-color: #dc3545;">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="cover">
+            <div class="container">
+                <h1 class="title">Học Tiếng Anh Online Cùng <b style="color: #FEA128;">TQS English</b></h1>
+                <p class="desc">TQS English là hệ thống giáo dục tiếng anh hàng đầu Việt Nam. Học hiệu quả với giảng
+                    viên có nhiều kinh nghiệm.</p>
+                <div class="btn-cta">
+                    <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư vấn
+                        &gt;&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="advantage">
+        <div class="container">
+            <h2 class="title">KHÓA HỌC TIẾNG ANH GIAO TIẾP CHUẨN QUỐC TẾ PHÙ HỢP VỚI AI?</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img src="./assets/img/girl1.jpg" alt="">
+                        <p class="desc">Người MẤT CĂN BẢN TIẾNG ANH nhưng chưa biết bắt đầu lại từ đâu và bằng cách nào là tốt nhất</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img src="./assets/img/girl2.jpg" alt="">
+                        <p class="desc">Sinh viên hoặc người đi làm BẬN RỘN, KHÔNG SẮP XẾP ĐƯỢC THỜI GIAN học tại trung tâm</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img src="./assets/img/boy3.jpg" alt="">
+                        <p class="desc">Có kế hoạch đi DU LỊCH HOẶC ĐỊNH CƯ TẠI NƯỚC NGOÀI, cần giao tiếp tiếng Anh thành thạo</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item">
+                        <img src="./assets/img/girl4.jpg" alt="">
+                        <p class="desc">SỢ TIẾNG ANH, chỉ hào hứng học trong thời gian ngắn, MẤT ĐỘNG LỰC học giữa chừng</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="btn-cta">
+                <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư vấn
+                    &gt;&gt;&gt;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="achievement">
+        <div class="container">
+            <h2 class="title">BẠN SẼ ĐẠT ĐƯỢC GÌ SAU KHÓA HỌC NÀY</h2>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="list-benefits">
+                        <div class="item active" data-name="cung trinh do">
+                            <div class="flex top">
+                                <h3 class="title">100% học viên trong lớp cùng trình độ</h3>
+                                <div class="bottom">
+                                    <div class="content">
+                                        <p>Cam kết 100% học viên cùng trình độ và mục tiêu. Đảm bảo học viên được giảng dạy và tiếp thu kiến thức tốt nhất.</p>
+                                    </div>
+                                </div>
+                                <h3 class="title">Đa dạng lịch học, linh động địa điểm</h3>
+                                <div class="bottom">
+                                    <div class="content">
+                                        <p>Lịch học đa dạng 3 buổi/ tuần, 5 buổi/ tuần và bạn có học tập ở bất kỳ đâu: tại nhà, quán cafe, …</p>
+                                    </div>
+                                </div>
+                                <h3 class="title">Lớp học chỉ từ 6 - 12 học viên</h3>
+                                <div class="bottom">
+                                    <div class="content">
+                                        <p>Sĩ số lớp nhỏ giúp giáo viên có thể theo sát từng học viên và đảm bảo được chất lượng đầu ra tốt hơn.</p>
+                                    </div>
+                                </div>
+                                <h3 class="title">Kiểm tra chất lượng định kỳ</h3>
+                                <div class="bottom">
+                                    <div class="content">
+                                        <p>Kiểm tra định kỳ mỗi giữa khoá, cuối khoá giúp học viên, phụ huynh, giáo viên đánh giá được kết quả học tập.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="text-center">
+                        <div class="relative wrap-image">
+                            <img src="./assets/img/benefits.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-cta">
+            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí ngay
+                &gt;&gt;&gt;</a>
+        </div>
+    </div>
+    
+    <div class="list-teacher">
+        <div class="container">
+            <h2 class="title">Đội ngũ giáo viên tâm huyết và giàu kinh nghiệm</h2>
+            <div class="row body">
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="list-item">
+                        <div class="item">
+                            <i class="fa-solid fa-person-chalkboard"></i>
+                            <p class="desc">200+ giáo viên bản xứ và Việt Nam cùng trợ giảng dày dặn kinh nghiệm.</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-address-card"></i>
+                            <p class="desc">100% có bằng giảng dạy Anh ngữ theo tiêu chuẩn quốc tế như TESOL, CELTA hoặc
+                                TEFL.</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <p class="desc">15% giáo viên có bằng Thạc sĩ, Tiến sĩ.</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-people-group"></i>
+                            <p class="desc">Đội ngũ giáo viên thường xuyên được tham gia các khóa bồi dưỡng năng lực
+                                nghiệp vụ nhằm nâng cao chất lượng giảng dạy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div id="slider" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="item row">
+                                    <div class="col-6">
+                                        <div class="info-teacher">
+                                            <img src="./assets/img/teacher-1.jpg" alt=""
+                                                class="d-block w-75 img-teacher">
+                                            <p class="name">Ms.Jesse</p>
+                                            <div class="contact">
+                                                <i class="icon fa-brands fa-facebook"></i>
+                                                <i class="icon fa-brands fa-square-instagram"></i>
+                                                <i class="icon fa-brands fa-twitter"></i>
+                                                <i class="icon fa-solid fa-envelope"></i>
+                                                <i class="icon fa-solid fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-info">
+                                            <li>IELTS 8.0</li>
+                                            <li>Thạc sĩ Đại Học Hull</li>
+                                            <li>Chứng chỉ giảng dạy Tiếng Anh</li>
+                                            <li>Trên 3 năm kinh nghiệm</li>
+                                            <li>Đạt giải thưởng khóa luận xuất sắc</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="item row">
+                                    <div class="col-6">
+                                        <div class="info-teacher">
+                                            <img src="./assets/img/teacher-2.jpg" alt=""
+                                                class="d-block w-75 img-teacher">
+                                            <p class="name">Ms.Kelly</p>
+                                            <div class="contact">
+                                                <i class="icon fa-brands fa-facebook"></i>
+                                                <i class="icon fa-brands fa-square-instagram"></i>
+                                                <i class="icon fa-brands fa-twitter"></i>
+                                                <i class="icon fa-solid fa-envelope"></i>
+                                                <i class="icon fa-solid fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-info">
+                                            <li>IELTS 7.5</li>
+                                            <li>Cử nhân Đại Học Kent</li>
+                                            <li>Chứng chỉ giảng dạy Tiếng Anh</li>
+                                            <li>Trên 3 năm kinh nghiệm</li>
+                                            <li>Diễn giả hội thảo về Toeic</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="item row">
+                                    <div class="col-6">
+                                        <div class="info-teacher">
+                                            <img src="./assets/img/teacher-3.jpg" alt=""
+                                                class="d-block w-75 img-teacher">
+                                            <p class="name">Mr.Quy</p>
+                                            <div class="contact">
+                                                <i class="icon fa-brands fa-facebook"></i>
+                                                <i class="icon fa-brands fa-square-instagram"></i>
+                                                <i class="icon fa-brands fa-twitter"></i>
+                                                <i class="icon fa-solid fa-envelope"></i>
+                                                <i class="icon fa-solid fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-info">
+                                            <li>IELTS 8.0</li>
+                                            <li>Tiến sĩ Đại Học Notre Dame</li>
+                                            <li>Chứng chỉ giảng dạy Tiếng Anh</li>
+                                            <li>Trên 3 năm kinh nghiệm</li>
+                                            <li>Đạt danh hiệu sinh viên xuất sắc</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="item row">
+                                    <div class="col-6">
+                                        <div class="info-teacher">
+                                            <img src="./assets/img/teacher-4.jpg" alt=""
+                                                class="d-block w-75 img-teacher">
+                                            <p class="name">Mr.Son</p>
+                                            <div class="contact">
+                                                <i class="icon fa-brands fa-facebook"></i>
+                                                <i class="icon fa-brands fa-square-instagram"></i>
+                                                <i class="icon fa-brands fa-twitter"></i>
+                                                <i class="icon fa-solid fa-envelope"></i>
+                                                <i class="icon fa-solid fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-info">
+                                            <li>IELTS 8.0</li>
+                                            <li>Cử nhân Đại Học Công Nghiệp</li>
+                                            <li>Chứng chỉ giảng dạy Tiếng Anh</li>
+                                            <li>Trên 3 năm kinh nghiệm</li>
+                                            <li>Top 6 cuộc thi Tiếng Anh quốc tế</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="item row">
+                                    <div class="col-6">
+                                        <div class="info-teacher">
+                                            <img src="./assets/img/teacher-5.jpg" alt=""
+                                                class="d-block w-75 img-teacher">
+                                            <p class="name">Ms.Thanh</p>
+                                            <div class="contact">
+                                                <i class="icon fa-brands fa-facebook"></i>
+                                                <i class="icon fa-brands fa-square-instagram"></i>
+                                                <i class="icon fa-brands fa-twitter"></i>
+                                                <i class="icon fa-solid fa-envelope"></i>
+                                                <i class="icon fa-solid fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-info">
+                                            <li>IELTS 7.5</li>
+                                            <li>Thạc sĩ Đại Công Ngiệp</li>
+                                            <li>Chứng chỉ giảng dạy Tiếng Anh</li>
+                                            <li>Trên 3 năm kinh nghiệm</li>
+                                            <li>Tác giả của nhiều sách Tiếng Anh </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="item row">
+                                    <div class="col-6">
+                                        <div class="info-teacher">
+                                            <img src="./assets/img/teacher-6.jpg" alt=""
+                                                class="d-block w-75 img-teacher">
+                                            <p class="name">Ms.Mai</p>
+                                            <div class="contact">
+                                                <i class="icon fa-brands fa-facebook"></i>
+                                                <i class="icon fa-brands fa-square-instagram"></i>
+                                                <i class="icon fa-brands fa-twitter"></i>
+                                                <i class="icon fa-solid fa-envelope"></i>
+                                                <i class="icon fa-solid fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <ul class="list-info">
+                                            <li>IELTS 7.5</li>
+                                            <li>Cử nhân Đại Học Công Nghiệp</li>
+                                            <li>Chứng chỉ giảng dạy Tiếng Anh</li>
+                                            <li>Trên 3 năm kinh nghiệm</li>
+                                            <li>Đạt danh hiệu Sinh viên Xuất sắc</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#slider" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#slider" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#slider" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#slider" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#slider" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-cta">
+                    <a href="#!" class="btn">&gt;&gt; Tìm hiểu thêm &lt;&lt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="student-opinions">
+        <div class="container">
+            <h2 class="title">Phụ huynh & Học viên nói gì về TQS English</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-1.jpeg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Em <b>Nguyễn Thị Hà</b></p>
+                                <p>Học viên TQS</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Môi trường thân thiện và hiện đại ở TQS đã giúp em dần
+                                    quen với việc rèn luyện và nói tiếng Anh. Em bắt đầu có nhiều người bạn mới để cùng
+                                    trao đổi kỹ năng,
+                                    chủ động nhờ thầy cô sửa lỗi sai. Em không còn nhút nhát nữa”</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-6.jpg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Chị <b>Nguyễn Thị Xuân Hiền</b></p>
+                                <p>Phụ huynh</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Gia đình rất tin tưởng vào TQS nên đã cho các con học từ khi còn nhỏ,
+                                    ngoài ra còn giới thiệu cho bạn bè. Các con đi học tiếp thu bài rất tốt,
+                                    không bị áp lực bài vở. Ngoài ra, con tự tin hơn rất nhiều.”</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-3.jpg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Em <b>Nguyễn Thị Phượng</b></p>
+                                <p>Học viên TQS</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Mục tiêu của em là Lớp 6 sẽ thi KET, lớp 8 sẽ thi PET.
+                                    Lớp 9 hoặc 10 sẽ phải đạt IELTS 8.0. Em tin tưởng rằng với lộ trình bài bản của TQS
+                                    cộng với tính tự lập,
+                                    chủ động của bản thân, em sẽ chinh phục được các mục tiêu này.”</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-4.jpg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Em <b>Trần Thị Hoa</b></p>
+                                <p>Học viên TQS</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Sau khi học ở TQS em thấy mooi trường ở đây rất thân thiện,
+                                    các giảng viên giảng dạy rất có tâm và rất dễ tính.
+                                    Họ hay trò chuyện trao đổi với học viên rất nhiều. Em rất thích học ở TQS-Enghlsh.”
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-5.jpg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Em <b>Nguyễn Trần Hà My</b></p>
+                                <p>Học viên TQS</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Cảm ơn TQS, sau khi kết thúc khóa học, ngoài việc tự tin hơn khi giao
+                                    tiếp tiếng anh,
+                                    mình cũng trang bị thêm nhiều kĩ nằng khác như thuyết trình, teamwork,... Mình sẽ
+                                    giới thiệu TQS cho các bạn bè của mình.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-2.jpeg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Chị <b>Nguyễn Thị Xuân Hiền</b></p>
+                                <p>Phụ huynh</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Tiếng Anh là một kỹ năng toàn cầu mà con cần phát triển suốt đời,
+                                    tôi đã tin tưởng hoàn toàn và đầu tư cho con học tại TQS từ lớp 2 và sẽ tiếp tục
+                                    cùng con chinh phục
+                                    KET, PET, IELTS để Khang từng bước chuẩn bị cho ước mơ du học của mình’’</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-7.jpg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Em <b>Trần Thị lan</b></p>
+                                <p>Học viên TQS</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Môi trường thân thiện và hiện đại ở TQS đã giúp em dần
+                                    quen với việc rèn luyện và nói tiếng Anh. Em bắt đầu có nhiều người bạn mới để cùng
+                                    trao đổi kỹ năng,
+                                    chủ động nhờ thầy cô sửa lỗi sai. Em không còn nhút nhát nữa”</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="img">
+                                <img src="./assets/img/opinions-8.jpg" alt="" class="img-opinions">
+                            </div>
+                            <div class="info">
+                                <p class="name">Em <b>Nguyễn Trần Anh Thư</b></p>
+                                <p>Học viên TQS</p>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="desc">“Môi trường thân thiện và hiện đại ở TQS đã giúp em dần
+                                    quen với việc rèn luyện và nói tiếng Anh. Em bắt đầu có nhiều người bạn mới để cùng
+                                    trao đổi kỹ năng,
+                                    chủ động nhờ thầy cô sửa lỗi sai. Em không còn nhút nhát nữa”</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="btn-cta">
+                <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư vấn
+                    &gt;&gt;&gt;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="course">
+        <div class="container">
+            <h2 class="title">Đa Dạng Khóa Học Dành Cho Mọi Độ Tuổi Tại TQS ENGLISH</h2>
+            <p class="desc">Với chương trình học đa dạng, được thiết kế cá nhân hóa, tại TQS cho dù bạn đang ở cấp độ
+                nào,
+                độ tuổi nào cũng dễ dàng lựa chọn khóa học tiếng Anh phù hợp cho riêng mình.</p>
+            <div class="row list-course">
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="./assets/img/course-1.jpg" alt="" class="img-course">
+                        <div class="info">
+                            <h3 class="sub-title"><strong>TIẾNG ANH CHO BÉ MẪU GIÁO</strong></h3>
+                            <p class="desc hide">Chương trình tiếng Anh cho bé Mẫu giáo được thiết kế giúp các bé thẩm thấu
+                                Anh ngữ tự nhiên thông qua phương pháp học qua vui chơi.
+                                Qua đó, hình thành tình yêu Anh ngữ ngay từ giai đoạn vàng học ngôn ngữ - từ 4 tuổi.</p>
+                        </div>
+                        <div class="btn-cta">
+                            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư
+                                vấn &gt;&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="./assets/img/course-2.jpg" alt="" class="img-course">
+                        <div class="info">
+                            <h3 class="sub-title"><strong>TIẾNG ANH THIẾU NHI</strong></h3>
+                            <p class="desc hide">Chương trình được thiết kế giúp trẻ học tiếng Anh qua khám phá thế giới.
+                                Từ đó, trẻ tiếp thu kiến thức và hình thành kỹ năng Anh ngữ vững vàng, tự tin đạt điểm
+                                cao môn tiếng
+                                Anh tại trường chính quy và chinh phục chứng chỉ Cambridge với điểm số cao.</p>
+                        </div>
+                        <div class="btn-cta">
+                            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư
+                                vấn &gt;&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="./assets/img/course-3.jpg" alt="" class="img-course">
+                        <div class="info">
+                            <h3 class="sub-title"><strong>TIẾNG ANH THCS</strong></h3>
+                            <p class="desc hide">Chương trình tiếng Anh giúp thanh thiếu niên xây dựng 4 kỹ
+                                năng Anh ngữ toàn diện cùng với bộ kỹ năng học tập chuẩn toàn cầu, giúp hình thành nền
+                                tảng
+                                lãnh đạo nhí và chinh phục các chứng chỉ quốc tế KET, PET với điểm số cao.</p>
+                        </div>
+                        <div class="btn-cta">
+                            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư
+                                vấn &gt;&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="./assets/img/course-4.jpg" alt="" class="img-course">
+                        <div class="info">
+                            <h3 class="sub-title"><strong>LUYỆN THI IELTS TQS</strong></h3>
+                            <p class="desc hide">Chương trình Luyện thi IELTS TQS cam kết đầu ra, đáp ứng mọi nhu cầu từ
+                                luyện chuyên sâu đến nâng band điểm cấp tốc. Đồng hành với học viên là đội ngũ giáo viên
+                                giàu kinh nghiệm luyện thi. Kho tài liệu và đề
+                                thi mẫu sát thực tế, độc quyền giúp học viên luyện kỹ năng làm bài.</p>
+                        </div>
+                        <div class="btn-cta">
+                            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư
+                                vấn &gt;&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="./assets/img/course-5.jpg" alt="" class="img-course">
+                        <div class="info">
+                            <h3 class="sub-title"><strong>TIẾNG ANH CHO NGƯỜI MẤT GỐC</strong></h3>
+                            <p class="desc hide">
+                                Mục tiêu chính của khóa học này là giúp những người học không có kiến thức nền vững về tiếng Anh có thể bắt đầu 
+                                và phát triển khả năng sử dụng tiếng Anh tự tin và hiệu quả trong cuộc sống hàng ngày và trong môi trường làm việc một cách tự tin hơn.
+
+                            </p>
+                        </div>
+                        <div class="btn-cta">
+                            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư
+                                vấn &gt;&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                    <div class="card">
+                        <img src="./assets/img/course-6.jpg" alt="" class="img-course">
+                        <div class="info">
+                            <h3 class="sub-title"><strong>TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</strong></h3>
+                            <p class="desc hide">Chương trình tiếng Anh giao tiếp với lịch học linh hoạt phù hợp với nhu cầu
+                                của người bận rộn.
+                                Chương trình tập trung vào xây dựng và nâng cao kỹ năng giao tiếp tiếng Anh với 365+ chủ
+                                đề học bao phủ mọi khía cạnh cuộc sống.
+                                Giáo viên bản ngữ tận tâm, sửa phát âm ngay trên lớp.</p>
+                        </div>
+                        <div class="btn-cta">
+                            <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư
+                                vấn &gt;&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 first">
+                    <h3 class="title">TQS ENGLISH</h3>
+                    <p><b>TQS ENGLISH</b>  tự hào là một trong những trung tâm Anh ngữ hàng đầu tại Việt Nam. </p>
+                    <address><b>Địa chỉ:</b> 14 Nguyễn Văn Bảo, phường 4, Gò Vấp, TP.Hồ Chí Minh</address>
+                    <p><b>Email:</b> tqsenglish@gmail.com</p>
+                    <p><b>Hotline:</b> 0123456789</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 second">
+                    <h3 class="title">Thông Tin</h3>
+                    <ul class="list-info">
+                        <li class="item">
+                            <a href="#!" class="link">Trang chủ</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Khóa học</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Lịch khai giảng</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Tin tức</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Giới thiệu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 second">
+                    <h3 class="title">Khóa Học</h3>
+                    <ul class="list-info">
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH CHO BÉ MẪU GIÁO</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH THIẾU NHI</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH THCS</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">LUYỆN THI IELTS TQS</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH CHO NGƯỜI MẤT GỐC</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 third">
+                    <h3 class="title">Liên Hệ</h3>
+                    <div class="list-img">
+                        <a href="#!">
+                            <img src="./assets/img/Logo-Facebook.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/img/Logo-instagram.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/img/Logo-mail.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ====== JS ======= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+   
+
+<script>
+    $(document).ready(function() {
+        $("#txtName").blur(function() {
+            var name = document.getElementById("txtName").value;
+            var regName = /^([A-Z][a-z]+(?: [A-Z][a-z]+)*)$/
+            if(name == null || name == "")
+                errName.innerHTML = "Không được bỏ trống";
+            else if(!regName.test(name))
+                errName.innerHTML = "Tên không hợp lệ";
+            else errName.innerHTML = "";
+        })
+
+        $("#txtPhone").blur(function() {
+            var phone = document.getElementById("txtPhone").value;
+            var regPhone = /^(0[13579])[0-9]{8}$/
+            if(phone == null || phone == "")
+                errPhone.innerHTML = "Không được bỏ trống";
+            else if(!regPhone.test(phone))
+                errPhone.innerHTML = "Số điện thoại không hợp lệ";
+            else errPhone.innerHTML = "";
+        })
+
+        $("#txtEmail").blur(function() {
+            var email = document.getElementById("txtEmail").value;
+            var regEmail = /^[a-z0-9]+(@gmail.com)$/
+            if(email == null || email == "")
+                errEmail.innerHTML = "Không được bỏ trống";
+            else if(!regEmail.test(email))
+                errEmail.innerHTML = "Email không hợp lệ";
+            else errEmail.innerHTML = "";
+        })
+
+        $("#idKhoaHoc").blur(function() {
+            var dsKH = $("#idKhoaHoc option:checked").val();
+            if(dsKH == "selected")
+                errKhoaHoc.innerHTML = "Chọn khóa học(*)"; 
+            else errKhoaHoc.innerHTML = ""; 
+            
+        })
+
+        $("#txtNgaySinh").blur(function() {
+            var birthDate = new Date(document.getElementById("txtNgaySinh").value);
+            var today = new Date();
+            var tuoi = today.getFullYear() - birthDate.getFullYear();
+            if(tuoi <= 3)
+                errNgaySinh.innerHTML = "Tuổi phải lớn hơn 3";
+            else errNgaySinh.innerHTML= "";
+            
+        })
+
+        $("#idTP").blur(function() {
+            var dsTP = $("#idTP option:checked").val();
+            if(dsTP == "selected")
+                errTP.innerHTML = "Chọn Tỉnh/TP(*)"; 
+            else errTP.innerHTML = ""; 
+            
+        })
+
+        $("#idQuan").blur(function() {
+            var dsQH = $("#idQuan option:checked").val();
+            if(dsQH == "selected")
+                errQuan.innerHTML = "Chọn Quận/Huyện(*)"; 
+            else   errQuan.innerHTML = ""; 
+            
+        })
+
+        $("#idCoSo").blur(function() {
+            var dsCS = $("#idCoSo option:checked").val();
+            if(dsCS == "selected")
+                errCoSo.innerHTML = "Chọn Cơ Sở(*)"; 
+            else   errCoSo.innerHTML = ""; 
+            
+        })
+
+        // =========== Ẩn Hiện ============
+
+        $("#idTP").blur(function() {
+            var hcm = document.getElementById("hcm").value;
+            var hn = document.getElementById("hn").value;
+            var la = document.getElementById("la").value;
+            var dsTP = $("#idTP option:checked").val();
+            if(dsTP == "selected") {
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".selected").css({"display" : "block"});
+            }
+            else if(dsTP == hcm){
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".hcm").css({"display" : "block"});
+            }
+            else if(dsTP == hn){
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".hnoi").css({"display" : "block"});
+            }
+            else{
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".lan").css({"display" : "block"});
+            }
+        })
+
+        $("#idQuan").blur(function() {
+            var gvap = document.getElementById("govap").value;
+            var bthanh = document.getElementById("bthanh").value;
+            var q1 = document.getElementById("q1").value;
+            var dda = document.getElementById("dongda").value;
+            var bdinh = document.getElementById("badinh").value;
+            var dhoa = document.getElementById("duchoa").value;
+            var vhung = document.getElementById("vhung").value;
+
+            var dsQuan = $("#idQuan option:checked").val();
+            if(dsQuan == "selected"){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".selected").css({"display" : "block"});
+            }
+            else if(dsQuan == gvap){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".govap").css({"display" : "block"});
+            }
+            else if(dsQuan == bthanh){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".bthanh").css({"display" : "block"});
+            }
+            else if(dsQuan == q1){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".q1").css({"display" : "block"});
+            }
+            else if(dsQuan == dda){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".dongda").css({"display" : "block"});
+            }
+            else if(dsQuan == bdinh){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".badinh").css({"display" : "block"});
+            }
+            else if(dsQuan == dhoa){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".duchoa").css({"display" : "block"});
+            }
+            else{
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".vhung").css({"display" : "block"});
+            }
+        })
+    });
+
+
+</script>
+
+</body>
+
+</html>

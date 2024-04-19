@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================= nationsIntro  ============================================= */
+
+.nationsIntro {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.nationsIntro .title {
+    padding-bottom: 30px;
+}
+
+.nationsIntro .item {
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nationsIntro .item .img-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0 ;
+}
+
+.nationsIntro .item:hover{
+    transform: scale(1.1);
+}
+
+.nationsIntro .item .img-icon {
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.nationsIntro .item a {
+    display: block;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: var(--primary-color);
+}
+
+.nationsIntro .item a:hover {
+    opacity: 0.8;
+}
+
+/* ========================================= registration ======================================= */
+
+.registration {
+    margin-top: 40px;
+    padding: 50px 0;
+    background-color: #ededed;
+}
+
+.registration .imageRegisForm {
+    display: flex;
+    align-items: center;
+}
+
+.registration .imageRegisForm img {
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: -20px 20px 10px #ccc ;
+}
+
+.registration .form {
+    padding: 50px;
+    border: 5px dotted #000;
+    border-radius: 12px;
+
+}
+.registration .form .sub-title {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: bold;
+}
+
+.registration .form input {
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+}
+
+.registration .form select{
+    border: none;
+    height: 45px;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.registration .form .btn {
+    color: #000;
+    border: 1px solid #000;
+    margin-top: 30px;
+}
+
+.registration .form .btn:hover {
+    background-color: #ccc;
+}
+
+/* ========================================= newsAbroad ======================================= */
+.newsAbroad {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    background-color: #F2F2F2;
+}
+
+.newsAbroad .title {
+    padding-bottom: 40px;
+}
+
+.newsAbroad .news img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.newsAbroad .news {
+    padding: 10px;
+}
+
+.newsAbroad .news .new-list {
+    height: 450px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.newsAbroad .news .new-list:hover {
+    box-shadow: 0 0 10px 10px #ccc;
+    transform: scale(1.1);
+}
+
+.newsAbroad .news .new-list .content {
+    padding: 10px;
+}
+
+.newsAbroad .new-list .content a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.hide {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+/* .newsAbroad  h1{
+    text-align: center;
+    padding: 50px;
+}
+
+.newsAbroad .container img{
+    width: 100%;
+    height: 200px;
+    padding: 10px 10px;
+}
+
+.newsAbroad .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.newsAbroad .container .firstSection{
+    display: flex;
+}
+
+
+.news{
+    margin: 10px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.news:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.news p{
+    margin: 10px 10px;
+}
+
+.news a{
+    text-decoration: none;
+    color: #FEA128;
+    font-weight: 500;
+} */
+
+/* ========================================= Introduction ======================================= */
+.introduction h1{
+    padding: 20px;
+    text-align: center;
+    background-color: #FEA128;
+    border-radius: 10px;
+}
+
+.introduction p{
+    padding: 10px;
+}
+
+#bt{
+    background-color: #FEA128;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    padding: 10px 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.btnDK #bt:hover{
+    background-color: #fc5203;
+}
+
+.btnDK{
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 30px;
+}
+
+.btnDK a{
+    text-decoration: none;
+}
+
+#usaIntroduction .firstSecUsa{
+    background-color: #fff7e8;
+    margin-bottom: 50px;
+}
+
+.secondSecUsa{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.secondSecUsa h2{
+    padding: 10px;
+    color: #FEA128;
+}
+
+.leftSecUsa{
+    background-color: #fff7e8;
+    margin-right: 20px;
+    width: 50%;
+}
+
+.rightSecUsa{
+    background-color: #fff7e8;
+    width: 50%;
+}
+
+#ausIntroduction .firstSecAus{
+    background-color: #fff7e8;
+    margin-bottom: 50px;
+}
+
+.secondSecAus{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.secondSecAus h2{
+    padding: 10px;
+    color: #FEA128;
+}
+
+.leftSecAus{
+    background-color: #fff7e8;
+    margin-right: 20px;
+    width: 50%;
+}
+
+.rightSecAus{
+    background-color: #fff7e8;
+    width: 50%;
+}
+
+#canadaIntroduction .firstSecCanada{
+    background-color: #fff7e8;
+    margin-bottom: 50px;
+}
+
+.secondSecCanada{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.secondSecCanada h2{
+    padding: 10px;
+    color: #FEA128;
+}
+
+.leftSecCanada{
+    background-color: #fff7e8;
+    margin-right: 20px;
+    width: 50%;
+}
+
+.rightSecCanada{
+    background-color: #fff7e8;
+    width: 50%;
+}
+
+
+
+
+/* =============================================== Ipad-Mobile ================================== */
+@media(max-width: 1023px) {
+    .registration .imageRegisForm {
+        justify-content: center;
+    }
+
+    .registration .form {
+        margin-top: 50px;
+    }
+
+    .registration .form .sub-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* ================================================= Mobile ========================================== */
+@media (max-width: 739px) {
+    .introduce .course .item .arrow {
+        font-size: 2rem;
+    }
+}
+

@@ -1,0 +1,51 @@
+
+
+/* =============================================== Ipad-Mobile ================================== */
+@media(max-width: 1023px) {
+    
+    .header .container .title {
+        width: 400px;
+        font-size: 4rem;
+    }
+
+    .navbar .btn-cta {
+        display: none;
+    }
+
+    .navbar .img-logo {
+        height: 50px;
+    }
+
+    .header {
+        height: 50vh;
+    }
+    
+    .header .container {
+        text-align: center;
+    }
+}
+
+/* ======================================= Mobile ===================================== */
+@media (max-width: 739px) {
+    
+    .header .container .title {
+        width: 400px;
+        font-size: 4rem;
+    }
+
+    .container .sub-title {
+        font-size: 2.5rem;
+    }
+
+    .header .cover .title {
+        width: 300px;
+        font-size: 2.5rem;
+    }
+
+
+    .btn-cta {
+        min-width: 100px;
+        font-size: 1.2rem;
+        font-weight: 600; 
+    }
+}

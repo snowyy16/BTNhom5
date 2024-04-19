@@ -1,0 +1,81 @@
+
+.news {
+    margin-top: 40px;
+}
+
+.news .left img {
+    display: inline-block;
+    width: 100%;
+    /* height: 150px; */
+    object-fit: cover;
+}
+
+.news .left .item {
+    margin-top: 20px;
+}
+
+.news .left .info {
+    padding: 10px;
+}
+
+.news .left .sub-title a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.news .left .desc {
+    font-size: 1.6rem;
+}
+
+.news .right {
+    padding-left: 10px;
+}
+
+.news .right .title {
+    font-size: 2.5rem;
+    padding: 15px;
+    border-left: 10px solid var(--primary-color);
+    background-color: #ededed;
+}
+
+.news .right .item {
+    margin-top: 20px;
+}
+
+.news .right img {
+    width: 100%;
+}
+
+.news .right .item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.news .number ul {
+    display: flex;
+}
+
+.news .number ul li {
+    list-style: none;
+    margin: 20px 10px;
+}
+
+.news .number ul a {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #000;
+}
+
+.news .number ul a:hover:not(.tick) {
+    background-color: var(--color-text);
+    color: #fff;
+}
+
+.tick {
+    background-color: var(--primary-color);
+}

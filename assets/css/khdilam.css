@@ -1,0 +1,174 @@
+.header {
+    height: 90vh;
+    background-image: url(../img/bg-dilam.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .title {
+    font-size: 6rem;
+    color: #fff;
+}
+
+.header .desc {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* ========================= Think ====================== */
+
+.think {
+    margin-top: 40px;
+    padding: 50px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.think .img-think {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.think .img-think img {
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: -20px 20px 10px 10px #ccc;
+}
+
+.think .sub-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.think .sub-title span {
+    color: var(--primary-color);
+}
+
+.think .item {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.think .item .icon {
+    height: 60px;
+    width: 60px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.think .item .desc {
+    font-size: 1.8rem;
+    word-spacing: 0.2rem;
+}
+
+/* ============================ Progress ========================= */
+.help {
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.help .sub-title {
+    padding: 50px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.help .sub-title span {
+    color: var(--primary-color);
+}
+
+.help .item {
+    display: flex;
+    width: 80%;
+    height: 120px;
+    padding: 10px 40px 10px 20px;
+    border-radius: 12px;
+    border-right: 20px solid var(--primary-color);
+    align-items: center;
+    box-shadow: 0 0 10px 10px #ccc;
+}
+
+.help .item:not(:first-of-type) {
+    margin-top: 50px;
+
+}
+
+.help .item:nth-last-of-type(2n+1) {
+    margin-left: 50px;
+}
+
+.help .item i {
+    width: 100%;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.help .item .desc {
+    font-size: 1.8rem;
+}
+
+.help .right {
+    display: flex;
+    align-items: center;
+}
+
+.help .right img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.help .container .btn-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* =============================================== Ipad-Mobile ================================== */
+@media(max-width: 1023px) {
+    .think .sub-title {
+        margin-top: 50px;
+    }
+
+    .help .item {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .help .item .desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .help .item:nth-last-of-type(2n+1) {
+        margin-left: 0;
+    }
+
+    .help .right {
+        margin-top: 40px;
+    }
+}
+
+/* ================================================= Mobile ========================================== */
+@media (max-width: 739px) {
+    .introduce .course .item .arrow {
+        font-size: 2rem;
+    }
+}

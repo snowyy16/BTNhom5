@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FEA128;
+    --color-btn: #f2f2f2;
+    --color-text: #27336e;
+}
+ 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* height: 10000px; */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============= Common ===================== */
+
+.sub-title {
+    padding: 50px 0;
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* ====================== Header ======================== */
+.header {
+    background-image: url(../img/bg-Online.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .container  .title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.header .desc {
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+ /* =========================== Reason ====================================== */
+
+.reason {
+    background-color: #ededed;
+    padding-bottom: 50px;
+}
+
+.reason .video {
+    background: url(../img/screen.png) center center no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    position: relative;
+}
+
+.reason .video iframe {
+    transform: translateY(-20%);
+}
+
+.reason .lis-item {
+    padding-left: 40px;
+}
+
+.reason .item {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px 10px #ccc;
+    border-radius: 12px;
+}
+
+.reason .item:not(:first-of-type) {
+    margin-top: 50px;
+}
+
+.reason .item .icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ededed;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reason .item i {
+    font-size: 5rem;
+}
+
+.reason .item .content {
+    font-size: 2rem;
+    padding-left: 10px;
+    flex-shrink: unset;
+}
+
+/* ============================= Solution =================================*/
+.solution {
+    margin-top: 40px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #ccc;
+}
+
+.solution .item {
+    margin-top: 20px;
+    border-radius: 12px;
+    transition: box-shadow 0.5s;
+}
+
+.solution .cover-img {
+    position: relative;
+}
+
+.solution .item img {
+    width: 100%;
+    border-radius: 12px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.solution .desc {
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.solution .item:hover {
+    box-shadow: 0 0 10px 10px #ccc;
+}
+
+.solution .item .cover {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 2s;
+}
+
+.solution .item .cover .desc-hover {
+    color: #fff;    
+    font-size: 1.8rem;
+    padding: 15px;
+    text-align: justify;
+}
+
+.solution .cover-img:hover .cover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.solution .cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.solution .cta .desc {
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.solution .cta .desc b {
+    font-size: 3.2rem;
+    color: var(--primary-color);
+}
+
+/* =================================== Route ============================ */
+.route {
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.route .sub-title {
+    padding-bottom: 30px;
+}
+
+.route .desc {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.route .body {
+    margin-top: 30px;
+    width: 80%;
+}
+
+.route .item {
+    margin-top: 20px;
+}
+
+.route .info{
+    display: flex;
+    align-items: center;
+}
+
+.route .item .info {
+    font-size: 2.4rem;
+}
+
+.route .item .time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 10px solid var(--primary-color);
+    border-radius: 50%;
+    line-height: 1;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: #fff;
+    z-index: 1;
+}
+
+.route .item .level {
+    height: 100px;
+    padding: 0 30px 0 50px;
+    margin-left: -50px;
+    border-radius: 0 999px 999px 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.route .item .level::after {
+    background: transparent;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: #fff transparent transparent transparent;
+    margin-left: auto;
+}
+
+.route .item .level:hover {
+    cursor: pointer
+}
+
+.route .row .skill{
+    padding: 10px;
+    font-size: 1.8rem;
+}
+
+.route .skill .box {
+    background-color: #ededed;
+    height: 100%;
+    padding: 10px;
+    max-width: 100%;
+    min-height: 200px;
+    border-radius: 12px;
+}
+
+.route .skill h3 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.route .item .level-1 {
+    width: 40%;
+}
+
+.route .item .level-2 {
+    width: 50%;
+}
+
+.route .item .level-3 {
+    width: 60%;
+}
+
+.route .item .level-4 {
+    width: 70%;
+}
+
+.route .item .level-5 {
+    width: 80%;
+}
+
+
+/* =============================================== Ipad-Mobile ================================== */
+@media(max-width: 1023px) {
+
+    .header .cover .title {
+        font-size: 4rem;
+       /* min-width: 500px;    */
+    }
+
+    .header .container .desc {
+        /* width: 400px; */
+        font-size: 1.4rem;
+        margin: 5px 0 10px;
+        font-weight: 400;
+    }
+
+    /* ======= Reason ======= */
+
+    .reason .video {
+        background: none;
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+    .reason .item i {
+        font-size: 4rem;
+    }
+    
+    .reason .item .content {
+        font-size: 1.8rem;
+        padding-left: 10px;
+    }
+
+    .solution .sub-title {
+        padding: 30px 0;
+    }
+
+    /* ========== Route =============== */
+    .route .desc {
+        font-size: 3rem;
+    }
+
+    .route .body {
+        width: 100%;
+    }
+
+    .route .item .level-1 {
+        width: 100%;
+    }
+    
+    .route .item .level-2 {
+        width: 100%;
+    }
+    
+    .route .item .level-3 {
+        width: 100%;
+    }
+    
+    .route .item .level-4 {
+        width: 100%;
+    }
+    
+    .route .item .level-5 {
+        width: 100%;
+    }
+}
+
+/* ======================================= Mobile ===================================== */
+@media (max-width: 739px) {
+    .reason .video {
+        width: 100vw;
+    }
+
+    .reason .lis-item {
+        padding-left: 0;
+    }
+}

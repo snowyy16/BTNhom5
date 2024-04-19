@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FEA128;
+    --color-btn: #f2f2f2;
+    --color-text: #27336e;
+}
+ 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /* height: 10000px; */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==================Header============== */
+.header {
+    background-image: url(../img/banner-news.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header .cover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.header .sub-title,.desc {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.header .desc {
+    width: 700px;
+    margin: 10px 0 20px;
+}
+
+.header .container .title {
+    width: 700px;
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #fff;
+}
+.row .card-body .title-h2{
+    color: black;
+    text-decoration: none;
+}
+.title-card{
+    color: black;
+    text-decoration: none;
+}
+.card-item{
+    color: #000;
+    text-decoration: none;
+}
+.pagnination{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: 0;
+    
+}
+.pagination .page-item {
+    margin: 0 5px; 
+}
+.pagination .page-item .page-link{ 
+    width: 30px;
+    height: 30px;
+    background-color: #fcfcfc; 
+    color: black; 
+}
+.pagination .page-link:hover{
+    background-color: #FEA128;
+}
+
+/* ================== News ================ */
+.news {
+    margin-top: 40px;
+}
+
+.news .left .card-title {
+    font-weight: bold;
+}
+
+.news .left .card-text {
+    padding: 10px 0;
+}
+
+.news .right {
+    position: sticky;
+    top: 100px;
+}
+
+.news .number ul {
+    display: flex;
+}
+
+.news .number ul li {
+    list-style: none;
+    margin: 20px 10px;
+}
+
+.news .number ul a {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #000;
+}
+
+.news .number ul a:hover:not(.tick) {
+    background-color: var(--color-text);
+    color: #fff;
+}
+
+.tick {
+    background-color: var(--primary-color);
+}

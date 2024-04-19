@@ -1,0 +1,358 @@
+
+/* ============================= Header =======================================*/
+.header {
+    background-image: url(../img/baner.jpg);
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.header .content {
+    text-align: center;
+}
+
+.header .desc {
+    width: 700px;
+    margin: 10px 0 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.header .container .title {
+    width: 700px;
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* ============================= Advantage =======================================*/
+
+.advantage {
+    margin-top: 40px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.advantage .sub-title {
+    margin-top: 8px;
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+
+.advantage .item {
+    margin-top: 20px;
+    border-radius: 12px;
+    transition: box-shadow 0.5s;
+}
+
+.advantage .item img {
+    width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.advantage .item .desc {
+    margin: 20px auto 0;
+    font-size: 1.8rem;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.advantage .item:hover {
+    box-shadow: 0 1px 22px 6px rgba(92,88,88,0.69)
+}
+
+.advantage .item:hover .desc {
+    color: var(--primary-color);
+}
+
+.advantage .btn-cta {
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* ========================================= Achievement ========================= */
+
+.achievement {
+    margin-top: 40px;
+}
+
+.achievement .title strong {
+    color: var(--primary-color);
+}
+
+.achievement  .list {
+    margin-top: 50px;
+}
+.achievement .icon i {
+    display: inline-block;
+    font-size: 4rem;
+    padding: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.achievement .item {
+    display: flex;
+}
+
+.achievement .item .wrap-text {
+    padding-left: 20px;
+    color: var(--color-text);
+}
+
+.achievement .item .count {
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.achievement .item .count:not(.no-after)::after {
+    content: "+";
+    font-size: 3rem;
+    position: absolute;
+}
+
+.achievement .item .desc {
+    font-size: 2.4rem;
+    word-spacing: 0.3rem;
+}
+
+.achievement .btn-cta {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* ===================================== List-Teacher ======================== */
+.list-teacher {
+    margin-top: 40px;
+    background-color: #f2f2f2;
+}
+
+
+.list-teacher .body {
+    margin-top: 50px;
+}
+
+.list-teacher .item {
+    display: flex;
+    align-items: center;
+}
+
+.list-teacher .item:not(:first-of-type) {
+    margin-top: 30px;
+
+}
+
+.list-teacher .fa-solid {
+    font-size: 5rem;
+}
+
+.list-teacher .desc {
+    padding-left: 40px;
+}
+
+    /* === Slider === */
+
+.carousel {
+    /* background-color: #f8f8f8; */
+    padding: 20px 0;
+}
+
+.slide .carousel-item .item {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.slide .carousel-item .info-teacher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide .img-teacher {
+    height: 230px;
+    width: 230px;
+    display: inline-block;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.slide .name {
+    font-size: 2rem;
+}
+
+.slide .icon {
+    font-size: 2rem;
+    color: #1e3050;
+}
+
+.slide .list-info li:not(:first-of-type, :last-of-type){
+    margin: 10px 0;
+}
+
+.slide .list-info li {
+    font-size: 2rem;
+    list-style: url(../img/star.svg);
+}
+
+::marker {
+    font-size: 4rem;
+}
+
+.list-teacher .btn-cta {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.list-teacher .icon-gt, .icon-lt {
+    display: inline-block;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.list-teacher .carousel-indicators {
+    margin-bottom: -30px;
+}
+
+.list-teacher .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+
+/* ========================================= Student-Opinions ========================= */
+
+.student-opinions .swiper {
+    padding-top: 150px;
+}
+
+.student-opinions .card {
+    height: 500px;
+    text-align: center;
+    border-radius: 12px;
+    border: 5px solid var(--primary-color);
+}
+
+.student-opinions .card .img-opinions {
+    margin-top: -100px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+}
+
+.student-opinions .info {
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+.student-opinions .info .name {
+    line-height: 1;
+}
+
+.student-opinions .star i:nth-of-type(3) {
+    font-size: 3rem;
+}
+
+.student-opinions .star i:nth-of-type(even) {
+    font-size: 2rem;
+}
+
+.student-opinions .info .desc {
+    padding-top: 10px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.student-opinions .swiper-pagination {
+    margin-top: 2px;
+}
+
+.student-opinions .btn-cta {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* ========================================= Course ========================= */
+
+.course {
+    margin-top: 40px;
+    background-color: #f2f2f2;
+    padding-bottom: 50px;
+}
+
+.course .desc {
+    width: 60%;
+    margin:30px auto 0;
+    text-align: center;
+}
+
+.course .list-course {
+    margin-top: 50px;
+}
+
+.course .card {
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+}
+
+.course .img-course {
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.course .info {
+    padding-bottom: 40px;
+}
+
+.course .info .sub-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.course .info .desc {
+    width: 100%;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.6rem;
+    word-spacing: 0.1rem;
+}
+
+.course .btn-cta {
+    text-align: center;
+}
+
+
+.hide {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

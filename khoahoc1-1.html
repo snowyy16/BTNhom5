@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/khoahoc1-1.css">
+    <link rel="stylesheet" href="./assets/css/responsive-common.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+     <!-- ==== Icon ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Khóa học Online 1 Kèm 1</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand"><img src="./assets/img/logo.png" alt="Logo TQS" class="img-logo"></a>
+            <button id="fondo" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapseNavbar">
+                <ul class="navbar-nav navbar-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./giothieu.html" class="nav-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle  active" role="button" data-bs-toggle="dropdown">Khóa
+                            học</a>
+                        <ul class="dropdown-menu navbar-sub-menu">
+                            <li>
+                                <a href="khoahoconline.html" class="dropdown-item">Khóa Học Online</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item active">Khóa Học Online 1 kèm 1</a>
+                            </li>
+                            <li>
+                                <a href="khoahocdilam.html" class="dropdown-item">Khóa Học đi làm</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-item">LUYỆN THI IELTS TQS</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-item">TIẾNG ANH CHO NGƯỜI MẤT GỐC</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="dropdown-item">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tintuc-1.html" class="nav-link">Tin Tức</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Thư Viện</a>
+                        <ul class="dropdown-menu navbar-sub-menu">
+                            <li><a href="./lich.html" class="dropdown-item">Lịch khai giảng</a></li>
+                            <li><a href="baithi.html" class="dropdown-item">Bài thi mẫu</a></li>
+                            <li><a href="duhoc.html" class="dropdown-item">Du Học</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="btn-cta">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí</button>
+                    <button type="button" class="btn">Đăng nhập</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <!-- ===== Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng kí nhận tư vấn</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- ===== Modal Body -->
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Họ và Tên
+                                    <span id="errName" class="err">(*)</span>
+                                </label>
+                                <input type="text" class="form-control" name="" id="txtName" placeholder="Họ và Tên">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Số Điện Thoại
+                                    <span id="errPhone" class="err">(*)</span>
+                                </label>
+                                <input type="number" class="form-control" name="" id="txtPhone"
+                                    placeholder="Số Điện Thoại">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Email
+                                    <span id="errEmail" class="err">(*)</span>
+                                </label>
+                                <input type="email" class="form-control" name="" id="txtEmail" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Khóa Học
+                                    <span id="errKhoaHoc" class="err">Chọn khóa học(*)</span>
+                                </label>
+                                <select name="" id="idKhoaHoc" class="form-select">
+                                    <option value="selected" selected>Chọn khóa học</option>
+                                    <option value="">TIẾNG ANH CHO BÉ MẪU GIÁO</option>
+                                    <option value="">TIẾNG ANH THIẾU NHI</option>
+                                    <option value="">TIẾNG ANH THCS</option>
+                                    <option value="">LUYỆN THI IELTS TQS</option>
+                                    <option value="">TIẾNG ANH CHO NGƯỜI MẤT GỐC</option>
+                                    <option value="">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Ngày Sinh
+                                    <span id="errNgaySinh" class="err">(*)</span>
+                                </label>
+                                <input type="date" class="form-control" name="" id="txtNgaySinh">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Tỉnh/Thành Phố bạn muốn học
+                                    <span id="errTP" class="err">Chọn Tỉnh/TP(*)</span>
+                                </label>
+                                <select name="" id="idTP" class="form-select">
+                                    <option value="selected" selected>Tỉnh/Thành Phố</option>
+                                    <option value="hcm" id="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="hn" id="hn">Hà Nội</option>
+                                    <option value="la" id="la">Long An</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Quận
+                                    <span id="errQuan" class="err">Chọn Quận/Huyện(*)</span>
+                                </label>
+                                <select name="" id="idQuan" class="form-select quan">
+                                    <option value="selected" class="selected" selected>Chọn Quận/Huyện</option>
+                                    <option id="govap" value="govap" class="hcm">Quận Gò vấp</option>
+                                    <option id="bthanh" value="bthanh" class="hcm ">Quận Bình Thạnh</option>
+                                    <option id="q1" value="q1" class="hcm">Quận 1</option>
+                                    <option id="dongda" value="dongda" class="hnoi">Quận Đống Đa</option>
+                                    <option id="badinh" value="badinh" class="hnoi">Quận Ba Đình</option>
+                                    <option id="duchoa" value="duchoa" class="lan">Huyện Đức Hòa</option>
+                                    <option id="vhung" value="vhung" class="lan">Huyện Vĩnh Hưng</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <label for="" class="form-label">Cơ Sở Tư Vấn
+                                    <span id="errCoSo" class="err">Chọn Cơ Sở(*)</span>
+                                </label>
+                                <select name="" id="idCoSo" class="form-select">
+                                    <option value="selected" class="selected" selected>Cơ Sở Tư Vấn</option>
+                                    <option value="" class="govap">14 Nguyễn Văn Bảo, phường 4, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="govap">222 Nguyễn Kiệm, phường 10, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="govap">333 Quang Trung, phường 11, Quận Gò Vấp, TP.HCM</option>
+                                    <option value="" class="bthanh">444 Phan Văn Trị, phường 1, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="bthanh">555 Lê Quang Định, phường 14, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="bthanh">666 Nguyễn Xí, phường 10, Quận Bình Thạnh, TP.HCM</option>
+                                    <option value="" class="q1">11 Võ Thi Sáu, phường 4, Quận 1, TP.HCM</option>
+                                    <option value="" class="q1">33 Hai Bà Trưng, phường 5, Quận 1, TP.HCM</option>
+                                    <option value="" class="q1">20 Lê Thánh Tôn, phường 16, Quận 1, TP.HCM</option>
+                                    <option value="" class="dongda">178C P. Tây Sơn, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="dongda">104 P. Trung Liệt, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="dongda">2 Ng. 121 P. Thái Hà, Trung Liệt, Đống Đa, Hà Nội</option>
+                                    <option value="" class="badinh">226 P. Vạn Phúc, Liễu Giai, Ba Đình, Hà Nội</option>
+                                    <option value="" class="badinh">93A P. Đội Cấn, Đội Cấn, Ba Đình, Hà Nội</option>
+                                    <option value="" class="badinh">2, Ngọc Hồ, Ba Đình, Hà Nội, Việt Nam</option>
+                                    <option value="" class="duchoa">Ấp Mới I Xã Mỹ Hạnh Nam, Mỹ Hạnh Nam, Đức Hòa, Long An, Việt Nam</option>
+                                    <option value="" class="vhung">thị trấn Vĩnh Hưng, huyện Vĩnh Hưng, tỉnh Long An</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- ===== Modal Footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn" data-bs-dismiss="modal" id="submit">Đăng kí</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        style="background-color: #dc3545;">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="cover">
+            <div class="container">
+                <h1 class="title">Khóa Học Trực Tuyến 1 kèm 1</h1>
+                <p class="desc">Học Mọi Lúc Mọi Nơi Trên Nhiều Nền Tảng</p>
+                <div class="btn-cta">
+                    <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư vấn
+                        &gt;&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="reason">
+        <div class="container">
+            <h2 class="sub-title">97% HỌC VIÊN TÌM ĐẾN TQS ĐỀU</h2>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xmD0Dn6Mzog?si=2NVyz-gLzu4FsOF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-6 col-sm-12 lis-item">
+                    <div class="row item">
+                        <div class="col-lg-2 icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="col-lg-10 content"> Quá bận rộn chuyện công việc, chuyện gia đình, không có nhiều thời gian, khó sắp xếp lịch học cố định tại các trung tâm</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-lg-2 icon"><i class="fa-solid fa-comments"></i></i></div>
+                        <div class="col-lg-10 content">Thiếu tự tin khi giao tiếp tiếng Anh với khách hàng, đồng nghiệp và Sếp dẫn đến khó thăng tiến trong công việc, mức lương cứ mãi "dậm chân tại chỗ"</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-lg-2 icon"><i class="fa-solid fa-earth-americas"></i></div>
+                        <div class="col-lg-10 content"> Là người Việt sống ở nước ngoài, cần học tiếng Anh nhưng gặp nhiều khó khăn khi tìm kiếm trung tâm và lệch múi giờ</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-lg-2 icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <div class="col-lg-10 content">Nhiều lần tự học, loay hoay với nhiều phương pháp học khác nhau nhưng lại bỏ cuộc sau một thời gian ngắn</div>
+                    </div>
+                    <div class="row item">
+                        <div class="col-lg-2 icon"><i class="fa-solid fa-gear"></i></div>
+                        <div class="col-lg-10 content">Thiếu môi trường thực hành giao tiếp phù hợp nên học trước quên sau</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="solution">
+        <div class="container">
+            <h2 class="sub-title">GIẢI PHÁP HOÀN HẢO</h2>
+            <div class="list-item row">
+                <div class="item col-lg-4">
+                    <div class="cover-img">
+                        <img src="./assets/img/solution-1.jpg" alt="">
+                        <div class="cover">
+                            <p class="desc-hover">Chủ động tham gia lớp học ở bất cứ nơi nào trên thế giới chỉ cần có thiết bị di động. Linh hoạt chọn khung giờ học từ 8h đến 23h theo giờ Việt Nam.</p>
+                        </div>
+                    </div>
+                    <p class="desc">Linh hoạt thời gian - phù hợp với người bận rộn</p>
+                </div>
+                <div class="item col-lg-4">
+                    <div class="cover-img">
+                        <img src="./assets/img/solution-2.jpg" alt="">
+                        <div class="cover">
+                            <p class="desc-hover">Mô hình lớp học 1 kèm 1 đảm bảo sự tương tác của giáo viên và bạn một cách hiệu quả nhất. Kèm cặp sát sao, sửa lỗi liên tục</p>
+                            <p class="desc-hover">Tương tác càng nhiều, hiệu quả càng cao. Khắc phục triệt để điểm yếu, phát huy tối đa điểm mạnh. Chắc chắn bạn sẽ nhanh chóng tự tin giao tiếp tiếng Anh với người nước ngoài</p>
+                        </div>
+                    </div>
+                    <p class="desc">1 Giáo viên, kèm 1 học viên - giao tiếp sửa lỗi liên tục</p>
+                </div>
+                <div class="item col-lg-4">
+                    <div class="cover-img">
+                        <img src="./assets/img/solution-3.jpg" alt="">
+                        <div class="cover">
+                            <p class="desc-hover">Đội ngủ giáo viên được đào tạo bài bản với các tiêu chuẩn khắt khe trước khi đứng lớp.</p>
+                            <p class="desc-hover">Nhiều năm kinh nghiệm giảng dạy, luôn đồng hành, kèm cặp sát sao và tạo động lực cho học viên.</p>
+                        </div>
+                    </div>
+                    <p class="desc">100% giáo viên đạt 7.0+ IELTS/900+ TOEIC hoặc có bằng cấp tương đương</p>
+                </div>
+                <div class="item col-lg-4">
+                    <div class="cover-img">
+                        <img src="./assets/img/solution-4.jpg" alt="">
+                        <div class="cover">
+                            <p class="desc-hover">Dựa trên điểm đầu vào và mong muốn của học viên, thiết kế lộ trình phù hợp. 
+                                Với những ngành nghề và các nhu cầu cá nhân khác nhau, bạn sẽ được tư vấn lộ trình cá nhân hóa. Đảm bảo học đi đôi với hành, 
+                                các kiến thức bạn được học trong lớp học sẽ có thể dễ dàng áp dụng ngay trong cuộc sống và công việc của bạn.</p>
+                        </div>
+                    </div>
+                    <p class="desc">Lộ trình cá nhân hóa - thiết kế bài giảng theo nhu cầu</p>
+                </div>
+                <div class="item col-lg-4">
+                    <div class="cover-img">
+                        <img src="./assets/img/solution-5.jpg" alt="">
+                        <div class="cover">
+                            <p class="desc-hover">Tự hào là trung tâm tiếng Anh đầu tiên áp dụng NLP vào giảng dạy, 
+                                TQs tự tin sẽ giúp bạn nâng cao khả năng giao 
+                                tiếp tiếng Anh một cách dễ dàng hơn gấp nhiều lần phương pháp truyền thống.</p>
+                        </div>
+                    </div>
+                    <p class="desc">X5 hiệu quả với các phương pháp tiên tiến</p>
+                </div>
+                <div class="item col-lg-4">
+                    <div class="cover-img">
+                        <img src="./assets/img/solution-6.jpg" alt="">
+                        <div class="cover">
+                            <p class="desc-hover">TQS tự hào là trung tâm Tiếng Anh có chất lượng học viên đầu ra thuộc top đầu cả nước. Với hơn 500.000 học viên đã tốt nghiệp với số điểm cao.</p>
+                        </div>
+                    </div>
+                    <p class="desc">Chuẩn đầu ra đạt chất lượng cao</p>
+                </div>
+            </div>
+            <div class="cta">
+                <p class="desc"><b>500.000+ </b>Học viên ở Việt Nam đã trải nghiệm và <br>
+                giao tiếp tiếng Anh thành công, còn bạn...?</p>
+                <div class="btn-cta">
+                    <a href="#!" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Đăng kí nhận tư vấn
+                        &gt;&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="route">
+        <div class="container">
+            <h2 class="sub-title">LỘ TRÌNH HỌC GIAO TIẾP TOÀN DIỆN</h2>
+            <p class="desc">Thời lượng: 60 phút/buổi. 2-3 buổi/tuần, thời gian linh hoạt</p>
+            <div class="body">
+                <div class="item list-item1">
+                    <div class="info">
+                        <div class="time">36 BUỔI</div>
+                        <div class="level level-1">Level 1: Starter</div>
+                    </div>
+                    <div class="list-1 hide">
+                        <div class="row" id="row-level-1">
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Pronunciation</h3>
+                                    <ul>
+                                        <li>Nắm được tổng quan về <b>44 âm trong bảng IPA</b>.</li>
+                                        <li>Nhìn phiên âm có thể nhận diện và đọc <b>chính xác > 70%</b> (Âm cuối, nối âm, ngữ điệu, trọng âm).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Vocabulary</h3>
+                                    <ul>
+                                        <li>Sử dụng <b>500 từ vựng</b>, giới thiệu bản thân, sở thích, hoạt động hàng ngày, gia đình, kế hoạch cá nhân.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Listening & Reading</h3>
+                                    <ul>
+                                        <li>Có thể nghe và <b>đọc hiểu các bài nghe / bài đọc cơ bản</b> tương đương trình độ A1.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Speaking</h3>
+                                    <ul>
+                                        <li>Có thể chia sẻ về bản thân và những chủ đề liên quan đến bản thân ở mức cơ bản trong thời gian từ 3 -5 phút</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Writing & Grammar</h3>
+                                    <ul>
+                                        <li>Viết được đoạn văn ngắn giới thiệu bản thân, gia đình, sở thích,..khoảng 200 từ.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item list-item2">
+                    <div class="info">
+                        <div class="time">72 BUỔI</div>
+                        <div class="level level-2">Level 2: Elementary</div>
+                    </div>
+                    <div class="list-2 hide">
+                        <div class="row" id="row-level-1">
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Pronunciation</h3>
+                                    <ul>
+                                        <li>Biết cách <b>nhấn trọng âm</b> cơ bản trong từ và câu</li>
+                                        <li>Phân biệt cách đọc các động từ đuôi -ed và s / es</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Vocabulary</h3>
+                                    <ul>
+                                        <li>Vốn từ vựng <b>khoảng 1000</b> từ về các chủ điểm: ăn uống, du lịch dịch vụ, tính cách,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Listening</h3>
+                                    <ul>
+                                        <li>Có thể <b>nghe hiểu những chủ đề quen thuộc</b> và nắm bắt được 
+                                            ý chính của chủ đề cơ bản: gia đình, bản thân, công việc, mua sắm,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Reading</h3>
+                                    <ul>
+                                        <li><b>Đọc hiểu những đoạn văn ngắn, đơn giản</b> và đọc hiểu được các 
+                                            thông tin trong các tài liệu hàng ngày như quảng cáo, báo cáo,..tương đương trình độ A2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Speaking</h3>
+                                    <ul>
+                                        <li>Giao tiếp trong công việc hoặc các tình huống giao tiếp ở mức đơn giản</li>
+                                        <li>Sử dụng các câu ngắn một cách thành thạo và phản xạ tương đối ổn với các chủ đề đã học</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Writing & Grammar</h3>
+                                    <ul>
+                                        <li>Viết được đoạn văn ngắn hoặc một lá thư đơn giản, <b>sử dụng được ngữ pháp</b> đã học gồm 5 thì cơ bản, liên từ cơ bản khoảng 250 từ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item list-item3">
+                    <div class="info">
+                        <div class="time">108 BUỔI</div>
+                        <div class="level level-3">Level 3: Intermediate</div>
+                    </div>
+                    <div class="list-3 hide">
+                        <div class="row" id="row-level-1">
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Pronunciation</h3>
+                                    <ul>
+                                        <li>Cách phát âm: was,were</li>
+                                        <li>Nhận biết âm câm ‘e’ trong các từ</li>
+                                        <li>Ngữ điệu trong câu</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Vocabulary</h3>
+                                    <ul>
+                                        <li>Vốn từ vựng <b>khoảng 2000 từ</b> về các chủ điểm: du lịch, trải nghiệm, xã hội, cuộc sống</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Listening</h3>
+                                    <ul>
+                                        <li>Có thể <b>nghe hiểu được ý chính</b> của các bài liên 
+                                            quan đến công việc, giáo dục, giải trí, chương trình phát thanh, truyền hình, thời sự,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Reading</h3>
+                                    <ul>
+                                        <li>Đọc hiểu những văn bản thực tế về các chủ đề liên quan đến sở thích, công việc tương đương trình độ B1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Speaking</h3>
+                                    <ul>
+                                        <li>Miêu tả được những trải nghiệm cơ bản</li>
+                                        <li>Sử dụng các câu văn ngắn miêu tả điều kiện gia đình, điều kiện sống, nền tảng giáo dục, ước mơ, kế hoạch,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Writing & Grammar</h3>
+                                    <ul>
+                                        <li><b>Viết được văn bản đơn giản</b> về các chủ điểm quen thuộc hoặc sở thích, cá nhân, viết thư, miêu tả sự kiện, trải nghiệm,...</li>
+                                        <li>Học các chủ điểm ngữ pháp như: Cách sử dụng câu bị động, câu gián tiếp, cụm động từ, trạng từ,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item list-item4">
+                    <div class="info">
+                        <div class="time">144 BUỔI</div>
+                        <div class="level level-4">Level 4: Upper - Intermediate</div>
+                    </div>
+                    <div class="list-4 hide">
+                        <div class="row" id="row-level-1">
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Pronunciation</h3>
+                                    <ul>
+                                        <li>Cách nối âm trong câu</li>
+                                        <li><b>Phân biệt các từ đồng âm</b></li>
+                                        <li>Trọng âm câu</li>
+                                        <li>Ngữ điệu trong câu nâng cao</li>
+                                        <li>Trọng âm của từ có 3, 4 âm tiết</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Vocabulary</h3>
+                                    <ul>
+                                        <li>Vốn từ vựng <b>khoảng 4000 từ</b> về các chủ điểm: giáo dục, phim ảnh, giải trí, thời sự, trải nghiệm</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Listening</h3>
+                                    <ul>
+                                        <li>Có thể <b>nghe hiểu ở tốc độ nói bình thường</b>, hiểu được các ý chính trong bài phát biểu, 
+                                            tin tức truyền hình, hiểu nội dung của phần lớn các bộ phim ở ngôn ngữ chuẩn</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Reading</h3>
+                                    <ul>
+                                        <li>Đọc hiểu những bài báo liên quan đến các vấn đề đương đại tương đương trình độ B2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Speaking</h3>
+                                    <ul>
+                                        <li><b>Tương tác ở mức độ tương đối trôi chảy</b> với người bản ngữ</li>
+                                        <li>Thảo luận, đưa ra các lập và giải thích trơn chu</li>
+                                        <li>Trình bày chi tiết, rõ ràng về các chủ đề quan tâm, giải thích một quan điểm bằng cách đưa ra lợi ích và bất lợi của vấn đề</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Writing & Grammar</h3>
+                                    <ul>
+                                        <li>Viết được các văn bản rõ ràng, chi tiết về nhiều chủ đề, có thể viết được bài luận hoặc báo cáo,...</li>
+                                        <li>Cách sử dụng câu điều kiện hỗn hợp, lời ước, mạo từ,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item list-item5">
+                    <div class="info">
+                        <div class="time">180 BUỔI</div>
+                        <div class="level level-5">Level 5: Advanced</div>
+                    </div>
+                    <div class="list-5 hide">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Pronunciation</h3>
+                                    <ul>
+                                        <li>Nhận biết cách <b>nhấn trọng âm của từ nâng cao</b></li>
+                                        <li>Trọng âm của từ có chứa tiền tố, hậu tố</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Vocabulary</h3>
+                                    <ul>
+                                        <li>Vốn <b>từ vựng khoảng 8000 từ</b> về các chủ điểm: sách và văn học, truyền thông, nghệ thuật, thời sự đương đại,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Listening</h3>
+                                    <ul>
+                                        <li><b>Hiểu được những bài giảng, bài thảo luận phức tạp</b> ngoài lĩnh vực chuyên môn tương đương trình độ C1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Reading</h3>
+                                    <ul>
+                                        <li>Đọc hiểu những văn bản dài, phức tạp, những bài báo chuyên ngành, những chỉ dẫn kỹ thuật ngoài lĩnh vực chuyên môn tương đương trình độ C1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Speaking</h3>
+                                    <ul>
+                                        <li><b>Diễn đạt trôi chảy, sử dụng ngôn ngữ linh hoạt</b> trong nhiều chủ đề khác nhau</li>
+                                        <li><b>Trình bày, tranh luận, thuyết trình linh hoạt</b>, chi tiết, rõ ràng các chủ đề</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12 skill">
+                                <div class="box">
+                                    <h3>Writing & Grammar</h3>
+                                    <ul>
+                                        <li>Viết được các văn bản rõ ràng, <b>có cấu trúc tốt</b> về các chủ đề phức tạp</li>
+                                        <li>Cách <b>sử dụng đảo ngữ</b>, quá khứ hoàn thành, lời ước với wish/ if only,..</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 first">
+                    <h3 class="title">TQS English</h3>
+                    <p><b>TQS English</b> tự hào là một trong những trung tâm Anh ngữ hàng đầu Việt
+                        NamTQS English tự hào là một trong những trung tâm Anh ngữ hàng đầu Việt Nam</p>
+                    <address><b>Địa chỉ:</b> 14 Nguyễn Văn Bảo, phường 4, Gò Vấp, TP.Hồ Chí Minh</address>
+                    <p><b>Email:</b> tqsenglish@gmail.com</p>
+                    <p><b>Hotline:</b> 0123456789</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 second">
+                    <h3 class="title">Thông Tin</h3>
+                    <ul class="list-info">
+                        <li class="item">
+                            <a href="#!" class="link">Trang chủ</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Khóa học</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Lịch khai giảng</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Tin tức</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">Giới thiệu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 second">
+                    <h3 class="title">Khóa Học</h3>
+                    <ul class="list-info">
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH CHO BÉ MẪU GIÁO</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH THIẾU NHI</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH THCS</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">LUYỆN THI IELTS TQS</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH CHO NGƯỜI MẤT GỐC</a>
+                        </li>
+                        <li class="item">
+                            <a href="#!" class="link">TIẾNG ANH GIAO TIẾP CHO NGƯỜI BẬN RỘN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 third">
+                    <h3 class="title">Liên Hệ</h3>
+                    <div class="list-img">
+                        <a href="#!">
+                            <img src="./assets/img/Logo-Facebook.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/img/Logo-instagram.png" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./assets/img/Logo-mail.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== JS ======= -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $("#txtName").blur(function() {
+            var name = document.getElementById("txtName").value;
+            var regName = /^([A-Z][a-z]+(?: [A-Z][a-z]+)*)$/
+            if(name == null || name == "")
+                errName.innerHTML = "Không được bỏ trống";
+            else if(!regName.test(name))
+                errName.innerHTML = "Tên không hợp lệ";
+            else errName.innerHTML = "";
+        })
+
+        $("#txtPhone").blur(function() {
+            var phone = document.getElementById("txtPhone").value;
+            var regPhone = /^(0[13579])[0-9]{8}$/
+            if(phone == null || phone == "")
+                errPhone.innerHTML = "Không được bỏ trống";
+            else if(!regPhone.test(phone))
+                errPhone.innerHTML = "Số điện thoại không hợp lệ";
+            else errPhone.innerHTML = "";
+        })
+
+        $("#txtEmail").blur(function() {
+            var email = document.getElementById("txtEmail").value;
+            var regEmail = /^[a-z0-9]+(@gmail.com)$/
+            if(email == null || email == "")
+                errEmail.innerHTML = "Không được bỏ trống";
+            else if(!regEmail.test(email))
+                errEmail.innerHTML = "Email không hợp lệ";
+            else errEmail.innerHTML = "";
+        })
+
+        $("#idKhoaHoc").blur(function() {
+            var dsKH = $("#idKhoaHoc option:checked").val();
+            if(dsKH == "selected")
+                errKhoaHoc.innerHTML = "Chọn khóa học(*)"; 
+            else errKhoaHoc.innerHTML = ""; 
+            
+        })
+
+        $("#txtNgaySinh").blur(function() {
+            var birthDate = new Date(document.getElementById("txtNgaySinh").value);
+            var today = new Date();
+            var tuoi = today.getFullYear() - birthDate.getFullYear();
+            if(tuoi <= 3)
+                errNgaySinh.innerHTML = "Tuổi phải lớn hơn 3";
+            else errNgaySinh.innerHTML= "";
+            
+        })
+
+        $("#idTP").blur(function() {
+            var dsTP = $("#idTP option:checked").val();
+            if(dsTP == "selected")
+                errTP.innerHTML = "Chọn Tỉnh/TP(*)"; 
+            else errTP.innerHTML = ""; 
+            
+        })
+
+        $("#idQuan").blur(function() {
+            var dsQH = $("#idQuan option:checked").val();
+            if(dsQH == "selected")
+                errQuan.innerHTML = "Chọn Quận/Huyện(*)"; 
+            else   errQuan.innerHTML = ""; 
+            
+        })
+
+        $("#idCoSo").blur(function() {
+            var dsCS = $("#idCoSo option:checked").val();
+            if(dsCS == "selected")
+                errCoSo.innerHTML = "Chọn Cơ Sở(*)"; 
+            else   errCoSo.innerHTML = ""; 
+            
+        })
+
+        // =========== Ẩn Hiện ============
+
+        $("#idTP").blur(function() {
+            var hcm = document.getElementById("hcm").value;
+            var hn = document.getElementById("hn").value;
+            var la = document.getElementById("la").value;
+            var dsTP = $("#idTP option:checked").val();
+            if(dsTP == "selected") {
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".selected").css({"display" : "block"});
+            }
+            else if(dsTP == hcm){
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".hcm").css({"display" : "block"});
+            }
+            else if(dsTP == hn){
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".hnoi").css({"display" : "block"});
+            }
+            else{
+                $("#idQuan").children().css({"display" : "none"});
+                $("#idQuan").children(".lan").css({"display" : "block"});
+            }
+        })
+
+        $("#idQuan").blur(function() {
+            var gvap = document.getElementById("govap").value;
+            var bthanh = document.getElementById("bthanh").value;
+            var q1 = document.getElementById("q1").value;
+            var dda = document.getElementById("dongda").value;
+            var bdinh = document.getElementById("badinh").value;
+            var dhoa = document.getElementById("duchoa").value;
+            var vhung = document.getElementById("vhung").value;
+
+            var dsQuan = $("#idQuan option:checked").val();
+            if(dsQuan == "selected"){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".selected").css({"display" : "block"});
+            }
+            else if(dsQuan == gvap){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".govap").css({"display" : "block"});
+            }
+            else if(dsQuan == bthanh){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".bthanh").css({"display" : "block"});
+            }
+            else if(dsQuan == q1){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".q1").css({"display" : "block"});
+            }
+            else if(dsQuan == dda){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".dongda").css({"display" : "block"});
+            }
+            else if(dsQuan == bdinh){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".badinh").css({"display" : "block"});
+            }
+            else if(dsQuan == dhoa){
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".duchoa").css({"display" : "block"});
+            }
+            else{
+                $("#idCoSo").children().css({"display" : "none"});
+                $("#idCoSo").children(".vhung").css({"display" : "block"});
+            }
+        })
+
+// =====================================================
+
+
+        $(".level-1").click(function() {
+            $(".list-1").toggle();
+        })
+        
+        $(".level-2").click(function() {
+            $(".list-2").toggle();
+        })
+
+        $(".level-3").click(function() {
+            $(".list-3").toggle();
+        })
+
+        $(".level-4").click(function() {
+            $(".list-4").toggle();
+        })
+
+        $(".level-5").click(function() {
+            $(".list-5").toggle();
+        })
+    });
+</script>
+</body>
+</html>
